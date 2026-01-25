@@ -34,6 +34,25 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
 .course-description { background: #f8f9ff; padding: 1rem; border-radius: 10px; margin-top: 1rem; color: #555; border-left: 4px solid #667eea; font-size: 0.9rem; }
 .gift-badge { display: inline-block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-top: 0.5rem; font-weight: 600; }
 
+/* Botón de WhatsApp agregado */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    padding: 0.6rem 0.9rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(37,211,102,0.18);
+}
+.btn-whatsapp svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+
+/* Ajustes responsive (mismos que tu original) */
 @media (min-width: 768px) {
     .header h1 { font-size: 2.5rem; }
     .header p { font-size: 1.1rem; }
@@ -65,6 +84,13 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
 <div class="container" id="coursesContainer"></div>
 
 <script>
+const WHATSAPP_NUMBER = '5492364667940'; // sin + ni espacios
+
+function whatsappLink(title) {
+    const mensaje = `Hola Ro! Quiero el taller ${title}`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
+}
+
 const courses = {
     instagram: [
         {title: "ABC de Instagram para Principiantes", items: ["Abrir tu cuenta y prepararla para mostrar tu negocio","Crear una biografía clara y elegir una foto de perfil que inspire confianza","Conocer los tipos de publicaciones: fotos, videos, historias y reels","Decidir qué subir primero y organizar tus ideas","Usar los mensajes para hablar con posibles clientes"], description: "En este taller vas a aprender Instagram desde cero, sin complicaciones. Vas a poder abrir tu cuenta profesional y empezar a usarla para atraer seguidores y mostrar tus productos o servicios. Ideal si nunca usaste redes para vender y querés comenzar a crecer y vender.", gift: false},
@@ -117,6 +143,13 @@ const courses = {
 
 function createCourseCard(course) {
     const giftBadge = course.gift ? '<span class="gift-badge">🎁 Guía PDF de regalo</span>' : '';
+    // botón WhatsApp con link ya url-encoded por whatsappLink()
+    const whatsappHTML = `
+      <a class="btn-whatsapp" href="${whatsappLink(course.title)}" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp para ${course.title}">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.727 11.727 0 0 0 12 0C5.373 0 .006 5.372.006 12c0 2.118.554 4.186 1.605 6.002L0 24l6.195-1.593A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12 0-1.97-.493-3.83-1.48-5.52zM12 21.6c-1.33 0-2.63-.36-3.77-1.04l-.27-.16-3.67.94.98-3.58-.18-.29A9.6 9.6 0 0 1 2.4 12c0-5.32 4.28-9.6 9.6-9.6 5.3 0 9.6 4.28 9.6 9.6 0 5.32-4.28 9.6-9.6 9.6z"/><path d="M17.06 14.54c-.26-.13-1.53-.76-1.77-.84-.24-.09-.42-.13-.6.13-.18.26-.7.84-.86 1.01-.16.17-.31.19-.57.06-.26-.13-1.09-.4-2.07-1.28-.77-.68-1.29-1.52-1.44-1.78-.15-.26-.02-.4.11-.53.11-.11.26-.31.39-.47.13-.16.17-.27.26-.45.09-.18.04-.34-.02-.47-.06-.13-.6-1.45-.82-1.97-.22-.52-.44-.45-.6-.46l-.51-.01c-.17 0-.45.06-.69.31-.24.26-.91.89-.91 2.17 0 1.29.93 2.53 1.06 2.71.13.18 1.83 2.89 4.44 3.94 3.64 1.44 3.64 0 4.3-.54.22-.18 1.41-1.28 1.61-2.51.19-1.22.02-1.13-.24-1.27z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    `;
     return `
         <div class="course-card">
             <h3 class="course-title">${course.title}</h3>
@@ -127,6 +160,7 @@ function createCourseCard(course) {
                 ${course.description}
             </div>
             ${giftBadge}
+            ${whatsappHTML}
         </div>
     `;
 }
