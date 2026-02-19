@@ -136,7 +136,7 @@ const courses = {
         "Cargar logo y colores",
         "Definir el encabezado y el pie de tu tienda"
     ],
-    description: "YA ESTA GRABADO! 🤳 Video de 1.30 horas y lo miras por YouTube las veces que quieras. 💵 Precio: $10.000 Pesos Argentinos o 12 dólares para Mexico, Colombia, Chile y Brasil (Por PayPal). 🔥 25% DE DESCUENTO en el primer mes de cualquier plan pago si te registras en Tiendanube con nuestro link. Escribí QUIERO y te paso info para comprarlo!",
+    description: "Video de 1.30 horas y lo miras por YouTube las veces que quieras. 💵 Precio: $10.000 Pesos Argentinos o 12 dólares para Mexico, Colombia, Chile y Brasil (Por PayPal). 🔥 25% DE DESCUENTO en el primer mes de cualquier plan pago si te registras en Tiendanube con nuestro link. Escribí QUIERO y te paso info para comprarlo!",
     gift: false
 }
     ],  
@@ -181,7 +181,7 @@ function renderCourses(category) {
 
     let allCourses = [];
     if (category === 'todos') {
-        allCourses = [...courses.instagram, ...courses.canva, ...courses.herramientas];
+        allCourses = [...courses.instagram, ...courses.canva, ...courses.tiendas, ...courses.herramientas];
     } else if (courses[category]) {
         allCourses = courses[category];
     }
