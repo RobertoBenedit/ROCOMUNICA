@@ -215,16 +215,27 @@ function renderCourses(category) {
                 container.appendChild(sectionDiv);
             }
         });
-    } else {
-        const grid = document.createElement('div');
-        grid.className = 'courses-grid';
-        grid.innerHTML = allCourses.map(createCourseCard).join('');
-        const section = document.createElement('div');
-        section.className = 'category-section active';
-        section.innerHTML = `<h2 class="section-title">${category.charAt(0).toUpperCase() + category.slice(1)}</h2>`;
-        section.appendChild(grid);
-        container.appendChild(section);
-    }
+  } else {
+    const grid = document.createElement('div');
+    grid.className = 'courses-grid';
+    grid.innerHTML = allCourses.map(createCourseCard).join('');
+    const section = document.createElement('div');
+    section.className = 'category-section active';
+
+    // Nombres bonitos para las secciones
+    const sectionNames = {
+        edicion: "Edición de Videos",
+        instagram: "Instagram",
+        canva: "Canva",
+        tiendas: "Tiendas",
+        herramientas: "Herramientas"
+    };
+
+    const title = sectionNames[category] || (category.charAt(0).toUpperCase() + category.slice(1));
+    section.innerHTML = `<h2 class="section-title">${title}</h2>`;
+    section.appendChild(grid);
+    container.appendChild(section);
+}
 }
 
 document.querySelectorAll('.nav-tab').forEach(tab => {
