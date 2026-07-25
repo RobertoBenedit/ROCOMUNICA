@@ -70,12 +70,13 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
 
 <div class="header">
     <h1>🚀 Catálogo de Talleres</h1>
-    <p>Marketing Digital - Instagram - Canva - IA - Ventas</p>
+    <p>Cada uno de los talleres vale 10000 pesos Argentinos o 12 Dolares</p>
     <button class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
     </button>
     <div class="nav-tabs" id="navTabs">
         <button class="nav-tab active" data-category="todos">Todos</button>
+        <button class="nav-tab" data-category="edicion">Edicion de Videos</button>
         <button class="nav-tab" data-category="instagram">Instagram</button>
         <button class="nav-tab" data-category="canva">Canva</button>
         <button class="nav-tab" data-category="tiendas">Tienda</button>
@@ -88,7 +89,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
 <script>
 const courses = {
 
-    Edicion:
+    edicion:
         [
         {title: "Edición de Videos con EDITS Nivel 1 (Básico)", items: ["Usar las funciones básicas del editor de videos","Cortar, unir y ordenar videos fácilmente","Agregar música, voz y textos simples","Crear un video usando solo fotos","Guardar y exportar en buena calidad"], description: "Vas a aprender a editar tus primeros videos sin depender de nadie. Podrás crear videos cortos para Instagram que llamen la atención y generen más vistas. Perfecto si nunca editaste y querés mostrar tus productos o servicios de forma profesional.", gift: false},
         {title: "Edición de Videos con EDITS Nivel 2 (Intermedio)", items: ["Superponer fotos e imágenes","Quitar el fondo de un video","Usar transiciones y efectos de sonido nuevos","Hacer zoom en las partes importantes","Usar teleprompter para leer mientras grabás"], description: "Vas a dar un paso más para que tus videos se vean modernos y profesionales. Esto te ayudará a crear contenido que mantenga a la gente mirando y genere más vistas y comentarios. Ideal si ya hacés videos básicos y querés mejorarlos para vender mejor.", gift: false},
@@ -188,7 +189,7 @@ function renderCourses(category) {
 
     let allCourses = [];
     if (category === 'todos') {
-        allCourses = [...courses.instagram, ...courses.canva, ...courses.tiendas, ...courses.herramientas];
+        allCourses = [...courses.edicion,...courses.instagram, ...courses.canva, ...courses.tiendas, ...courses.herramientas];
     } else if (courses[category]) {
         allCourses = courses[category];
     }
@@ -200,6 +201,7 @@ function renderCourses(category) {
 
     if (category === 'todos') {
         const sections = [
+            {name: 'Edicion de Videos', data: courses.edicion},
             {name: 'Instagram', data: courses.instagram},
             {name: 'Canva', data: courses.canva},
             {name: 'Tiendas', data: courses.tiendas},
