@@ -79,8 +79,12 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
         <button class="nav-tab" data-category="edicion">Edicion de Videos</button>
         <button class="nav-tab" data-category="instagram">Instagram</button>
         <button class="nav-tab" data-category="canva">Canva</button>
-        <button class="nav-tab" data-category="tiendas">Tienda</button>
-        <button class="nav-tab" data-category="herramientas">Herramientas</button>
+        <button class="nav-tab" data-category="tiendas">Tiendas Online</button>
+        <button class="nav-tab" data-category="whatsapp">WhatsApp</button>
+        <button class="nav-tab" data-category="InteligenciaArtificial">Inteligencia Artificial</button>
+        <button class="nav-tab" data-category="tuCursoOnline">Tu Curso Online</button>
+
+        
     </div>
 </div>
 
@@ -133,9 +137,11 @@ const courses = {
         {title: "Canva para Negocios", items: ["Etiquetas y stickers para imprimir o WhatsApp","Tarjetas de agradecimiento y gift cards","Posteos, portadas de reels e historias","Banners para tiendas online"], description: "Vas a tener todo el material visual que necesita tu emprendimiento para comunicar mejor. Esto aumenta la profesionalidad, seguidores y ventas diarias.", gift: false},
         {title: "Canva para Educación", items: ["Hacer etiquetas para útiles escolares","Calendario semanal y planificadores","Carátulas de cuadernos y carpetas","Medidas y archivos para imprimir"], description: "Vas a crear materiales educativos bonitos y útiles (para vos o para vender). Ayuda a organizar tu contenido y a atraer clientes en el rubro educación o cursos.", gift: false},
         {title: "Canva para Eventos", items: ["Tarjetas de invitación digital e impresa (con link y animación)","Etiquetas para golosinas, toppers para tortas","Banderines y bolsitas personalizadas"], description: "Vas a diseñar todo lo necesario para eventos, cumpleaños o bautismos (propios o para vender). Tus diseños se verán profesionales y generarán más pedidos o ventas.", gift: false},
+        {title:"Invitaciones digitales para EVENTOS",items:["Diseñarla desde cero en Canva VERSION GRATIS","Ponerle la información del evento, fotos, videos y dibujos","Agregar botones de WhatsApp y de Instagram","Poner la ubicación del evento (Google Maps)","Cómo compartirla con un link, por WhatsApp o con un código QR","Agregarle formulario para que los invitados confirmen asistencia, dejen mensajes o escriban comentarios","Adaptarla para cumpleaños, casamientos, 15 años, bautismos, baby showers y otros eventos"],description:"Es ideal para Emprendedores que quieren ofrecer un servicio diferente. Diseñadores y community managers. Organizadores de eventos. Personas que hacen invitaciones para familiares y amigos. Quienes buscan generar un ingreso extra creando invitaciones digitales para cumpleaños y todo tipo de eventos.",gift:false},
         {title: "Canva: Nuevas Funciones", items: ["Nuevos formatos y herramientas","Inteligencia artificial + voces con IA","Subtítulos automáticos en videos","Edición mágica de fotos","Hojas de cálculo simples"], description: "Vas a estar al día con lo nuevo de Canva para crear contenido más rápido y moderno. Te ayuda a mantener tu feed actualizado y atractivo para crecer.", gift: false},
         {title: "Canva: Mejorá tus Diseños con Aplicaciones", items: ["Efectos visuales y recorte de fotos con formas","Eliminar elementos no deseados","Cambiar fondos y crear reflejos","Transformar objetos a 3D","Hacer carruseles continuos"], description: "Vas a elevar tus diseños para que destaquen y generen más interacciones. Ideal para posteos virales que suman vistas y ventas.", gift: false},
         {title: "Canva: Diseño Navideño", items: ["Crear posteos y historias estáticas/animadas","Diseños digitales e imprimibles","Quitar fondos y usar sombras","Buscar recursos con palabras clave"], description: "Vas a tener contenido navideño bonito y rápido para diciembre (el mes que más se vende). Aprovechá para atraer más clientes y ventas de fin de año.", gift: false},
+        
             ],
    tiendas: [
         {title: "CREÁ TU TIENDANUBE 🛒 Nivel 1",items: ["Crear la cuenta (con el plan gratis o plan pago)","Configurar: WhatsApp, dirección, redes sociales","Crear páginas: Sobre nosotros, Política de cambios y devolución, etc.","Crear categorías y subcategorías para ordenar tus productos","Cargar productos con detalles, fotos y variantes","Cargar logo y colores","Definir el encabezado y el pie de tu tienda"],description: "Video de 1.30 horas y lo miras por YouTube las veces que quieras. 🔥 25% DE DESCUENTO en el primer mes de cualquier plan pago si te registras en Tiendanube con nuestro link.",gift: false},
@@ -144,20 +150,24 @@ const courses = {
         {title: "Creá tu web para vender cursos + ebooks con Tiendup",items: ["Crear y configurar tu cuenta desde cero","Diseñar tu web con tus colores, textos y marca","Armar páginas clave: Sobre mí, Servicios y Preguntas frecuentes","Organizar el menú para que sea fácil de navegar","Subir tu primer curso y/o ebook","Conectar Mercado Pago, PayPal y tarjeta para cobrar en todo el mundo"],description: "Este taller es ideal si querés vender ebooks, cursos, membresías. Monetizar tu conocimiento y tener tu propia academia online. No necesitas ser programador ni diseñador. Tiendup tiene un costo por mes, dependiendo qué plan elijas. Con nuestro link de afiliados, obtenés un 10% de descuento en cualquier plan.",gift: true},
         {title:" Cómo llevar visitas a tu tienda online (Tiendanube - Tiendup)",items:["Cómo evitar que tu tienda quede quieta esperando ventas","Cómo llevar visitas desde Instagram, historias, WhatsApp, bio y destacados","Qué productos o servicios conviene promocionar primero","Ideas de descuentos, cupones y promos por tiempo limitado","Cómo armar combos, 2x1, 3x2 o beneficios especiales","Cómo usar el sticker de enlace de forma estratégica","Cómo armar historias que lleven a la tienda","Cómo mostrar lo que vendés con beneficio, urgencia y llamado a la acción"],description:"Es para aprender a llevar más personas desde Instagram y WhatsApp hacia tu tienda, para generar más visitas, consultas y oportunidades de venta.",gift:false}
    ],  
-    herramientas: [
+    whatsapp: [
         {title: "Vender por WhatsApp",items: ["Presentación del nuevo agente con IA de WhatsApp","Crear tu QR para ferias y locales","Poner el link de WhatsApp en tu Instagram","Armar tu catálogo de productos","Proteger tu cuenta para evitar hackeos","Ahorrar tiempo con respuestas rápidas","Crear estados interactivos y canales de difusión"],description: "Además, te llevás una guía práctica de regalo. 🎁",gift: true},
         {title: "WhatsApp de Negocios", items: ["Descargar e instalar la app","Armar perfil de empresa con foto y descripción","Crear catálogo de productos","Hacer código QR y vincular con Instagram","Respuestas automáticas y estados","Abrir en la computadora y crear stickers"], description: "Vas a usar WhatsApp como una herramienta profesional para vender más fácil. Recibirás mensajes organizados, mostrarás productos y cerrarás ventas rápidas desde Instagram.", gift: false},
         {title: "Chat Automático en WhatsApp de Negocios",items: ["Como dejar lista a la nueva IA una vez que WhatsApp te habilita la función","Armar tu catálogo en Whatsapp y acomodar el perfil para que la IA tenga toda la información para que sepa que responder a tus clientes","Decirle como queres que responda, con tu tono y tus reglas (envíos, pagos, etc.)","Decirle en que casos responda la IA y cuándo vos"],description: "Convertí a WhatsApp en tu mejor vendedor. ⚠️ TENÉS QUE TENER HABILITADA LA FUNCIÓN. ⚠️ TENER WHATSAPP DE NEGOCIOS (NO EL COMUN)",gift: false},
-        {title: "Empezar un Canal de YouTube", items: ["Crear cuenta Gmail y configurar tu canal","Subir tus primeros videos paso a paso","Optimizar título, descripción y miniatura","Guía de prompts de regalo"], description: "Vas a tener una vidriera extra en YouTube para mostrar tus productos o cursos. Sumás visualizaciones largas y atraés seguidores que luego compran en Instagram.", gift: false},
-        {title: "Armar tu primer Curso Online", items: ["Planificar y grabar introducción en video","Herramientas necesarias y grabación de pantalla","Subir videos a YouTube/Drive","Plataformas para venderlo y próximos pasos"], description: "Vas a crear tu primer curso sin trabas técnicas y empezar a venderlo. Es una forma poderosa de generar ingresos pasivos y posicionarte como experto.", gift: false},
-        {title: "Grabación de cursos y videos para Youtube",items: ["Micrófonos y Cámaras: Qué comprar según tu presupuesto","Grabar la pantalla y vos con Canva y OBS un programa gratuito","Grabar tus clases de Zoom para revenderlas","Edición Express: Aprendé a cortar lo que sobra y poner títulos en minutos, con CANVA GRATIS"],description: "⚠️ Requisito: tener computadora. Este taller es ideal si querés empezar a grabar tus clases, sesiones o videos para tu canal de Youtube.",gift: false},
-        {title: "Aprender a Usar Zoom", items: ["Crear cuenta y diferencias de planes","Programar reuniones y unirte","Compartir pantalla, usar lápiz y micrófono","Grabar y editar partes"], description: "Vas a dar clases, reuniones o consultas por video con confianza. Perfecto para vender cursos en vivo o atender clientes sin salir de casa.", gift: false},
+    ],
+      InteligenciaArtificial: [
         {title: "ChatGPT para Negocios Nivel 1", items: ["Qué es ChatGPT y cómo usarlo fácil","Pedir ideas, textos y respuestas claras","Usarlo para atender clientes y crear copys/guiones","Hacer preguntas frecuentes rápidas"], description: "Vas a ahorrar horas escribiendo textos para vender, responder mensajes y crear contenido. Todo más rápido y profesional para crecer y vender más.", gift: false},
         {title: "ChatGPT para Crear Contenido Nivel 2", items: ["Configurar y diferencias gratis/paga","Prompts simples para mejorar textos","Usar con imágenes","Mejorar posteos en vivo"], description: "Vas a crear contenido de calidad en minutos usando IA. Ideal para mantener tu Instagram activo, sumar vistas y atraer clientes sin esfuerzo diario.", gift: true},
         {title:" Creá tus videos y diseños con Inteligencia Artificial",items:["Crear videos originales desde plantillas animadas INCREIBLES. (efecto retro, animado, comic, meme)","Transformar videos tuyos a dibujos, efectos creativos, memes, tipo cine y más!","Combinar fotos, dibujos y videos agregandole lo que quieras","Diseñar para tu instagram PERSONALIZADOS","Diseñar folletos para imprimir"],description:"Usaremos las aplicaciones GEMINI + CHAT GPT + META IA (Versiones Gratis y de pago)",gift:false},
         {title: "Crear Videos con Inteligencia Artificial", items: ["Crear videos a partir de una indicación escrita","Crear imágenes con IA","Rediseñar videos existentes","Hablarle correctamente a la IA (todo gratis)"], description: "Vas a generar videos e imágenes atractivos sin grabar ni editar mucho. Te da contenido fresco para Instagram, más vistas y ventas sin complicarte.", gift: true},
         {title: "Crear Imágenes con Inteligencia Artificial (IA)", items: ["Descargar e instalar las apps fáciles (ChatGPT + Gemini) para crear imágenes","Hacer imágenes desde cero con tu producto, tu foto o lo que imagines","Editar fotos simples: cambiar fondo, colores, agregar objetos o estilos nuevos","Tips rápidos para que las imágenes queden perfectas y profesionales","Guardarlas en el formato ideal para subirlas directo a Instagram"], description: "En este taller vas a crear imágenes atractivas y personalizadas sin saber diseño ni tener programas complicados. Usando solo IA gratis, podrás hacer fotos de productos, posteos o portadas para tus cursos que se vean modernas y generen más vistas, seguidores y mensajes de venta. Ideal si querés ahorrar tiempo y tener contenido lindo para Instagram que ayude a vender más, todo en solo 2 horas.", gift: true},
         {title: "Contenido Navideño con Inteligencia Artificial", items: ["Por qué diciembre es clave para ventas","Fotos navideñas mágicas con IA","Plantillas en Canva y música tendencia","Ideas express por rubro","10 prompts + 10 copys listos"], description: "Vas a preparar contenido navideño rápido y efectivo con IA. Aprovechá el boom de fin de año para sumar seguidores, vistas y ventas extras.", gift: false}
+    ],
+       tuCursoOnline: [
+        {title: "Empezar un Canal de YouTube", items: ["Crear cuenta Gmail y configurar tu canal","Subir tus primeros videos paso a paso","Optimizar título, descripción y miniatura","Guía de prompts de regalo"], description: "Vas a tener una vidriera extra en YouTube para mostrar tus productos o cursos. Sumás visualizaciones largas y atraés seguidores que luego compran en Instagram.", gift: false},
+        {title: "Armar tu primer Curso Online", items: ["Planificar y grabar introducción en video","Herramientas necesarias y grabación de pantalla","Subir videos a YouTube/Drive","Plataformas para venderlo y próximos pasos"], description: "Vas a crear tu primer curso sin trabas técnicas y empezar a venderlo. Es una forma poderosa de generar ingresos pasivos y posicionarte como experto.", gift: false},
+        {title: "Grabación de cursos y videos para Youtube",items: ["Micrófonos y Cámaras: Qué comprar según tu presupuesto","Grabar la pantalla y vos con Canva y OBS un programa gratuito","Grabar tus clases de Zoom para revenderlas","Edición Express: Aprendé a cortar lo que sobra y poner títulos en minutos, con CANVA GRATIS"],description: "⚠️ Requisito: tener computadora. Este taller es ideal si querés empezar a grabar tus clases, sesiones o videos para tu canal de Youtube.",gift: false},
+        {title: "Aprender a Usar Zoom", items: ["Crear cuenta y diferencias de planes","Programar reuniones y unirte","Compartir pantalla, usar lápiz y micrófono","Grabar y editar partes"], description: "Vas a dar clases, reuniones o consultas por video con confianza. Perfecto para vender cursos en vivo o atender clientes sin salir de casa.", gift: false},
     ],
 };
 
@@ -189,7 +199,7 @@ function renderCourses(category) {
 
     let allCourses = [];
     if (category === 'todos') {
-        allCourses = [...courses.edicion,...courses.instagram, ...courses.canva, ...courses.tiendas, ...courses.herramientas];
+        allCourses = [...courses.edicion,...courses.instagram, ...courses.canva, ...courses.tiendas, ...courses.whatsapp,...courses.InteligenciaArtificial,...courses.tuCursoOnline];
     } else if (courses[category]) {
         allCourses = courses[category];
     }
@@ -205,7 +215,11 @@ function renderCourses(category) {
             {name: 'Instagram', data: courses.instagram},
             {name: 'Canva', data: courses.canva},
             {name: 'Tiendas', data: courses.tiendas},
-            {name: 'Herramientas', data: courses.herramientas}
+            {name: 'WhatsApp', data: courses.whatsapp}
+            {name: 'Inteligencia Artificial', data: courses.InteligenciaArtificial}
+            {name: 'Tu Curso Online', data: courses.tuCursoOnline}
+
+            
         ];
         sections.forEach(sec => {
             if (sec.data.length > 0) {
@@ -228,7 +242,9 @@ function renderCourses(category) {
         instagram: "Instagram",
         canva: "Canva",
         tiendas: "Tiendas",
-        herramientas: "Herramientas"
+        whatsapp: "WhatsApp",
+        InteligenciaArtificial: "Inteligencia Artificial",
+        tuCursoOnline: "Tu Curso Online"  
     };
 
     const title = sectionNames[category] || (category.charAt(0).toUpperCase() + category.slice(1));
